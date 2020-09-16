@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WebRTC Debuger
 // @namespace    http://tampermonkey.net/
-// @version      0.12
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://crm.hotlead.io/telephony/web-rtc/sip-accounts
