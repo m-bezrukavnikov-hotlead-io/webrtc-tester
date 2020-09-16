@@ -22,7 +22,7 @@
     function loop(){
         if (unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session){
             var from = unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session._request.from;
-            output("_display_name: " + from._display_name + ", _user: " + from._uri._user);
+            output("_display_name: " + from._display_name + ", _uri._user: " + from._uri._user);
         }
     }
 
