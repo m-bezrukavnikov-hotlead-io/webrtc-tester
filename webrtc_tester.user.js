@@ -17,12 +17,20 @@
 
     var unsafeWindow = window.wrappedJSObject;
 
+    var contactName = document.getElementById("dialer-contact-name");
+    var contactNumber = document.getElementById("dialer-contact-number");
+
     document.getElementById("webrtc-wrapper").innerHTML += "<div id = 'webrtc-debugger-output' style='max-height: 200px; overflow: auto;'></div>";
 
     function loop(){
         if (unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session){
             var from = unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session._request.from;
             output("_display_name: " + from._display_name + ", _uri._user: " + from._uri._user);
+            contactName.innerHTML = from._display_name;
+            contactNumber.innerHTML = from._uri._user;
+        } else {
+            contactName.innerHTML = null;
+            contactNumber.innerHTML = null;
         }
     }
 
