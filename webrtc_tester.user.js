@@ -6,8 +6,8 @@
 // @author       You
 // @match        https://crm.hotlead.io/telephony/web-rtc/sip-accounts
 // @match        http://localhost:8080/telephony/web-rtc/sip-accounts
-// @downloadURL  https://github.com/DEMENT0R/GoD_helper/raw/master/god_helper.user.js
-// @updateURL    https://github.com/DEMENT0R/GoD_helper/raw/master/god_helper.user.js
+// @downloadURL  https://github.com/m-bezrukavnikov-hotlead-io/webrtc-tester/raw/master/webrtc_tester.user.js
+// @updateURL    https://github.com/m-bezrukavnikov-hotlead-io/webrtc-tester/raw/master/webrtc_tester.user.js
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
