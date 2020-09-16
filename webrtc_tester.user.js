@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WebRTC Debuger
 // @namespace    http://tampermonkey.net/
-// @version      0.1.3
+// @version      0.1.5
 // @description  try to take over the world!
 // @author       You
 // @match        https://crm.hotlead.io/telephony/web-rtc/sip-accounts
@@ -14,13 +14,21 @@
 
 (function() {
     'use strict';
-
+    // получаем доступ к окну
     var unsafeWindow = window.wrappedJSObject;
 
-    var contactName = document.getElementById("dialer-contact-name");
-    var contactNumber = document.getElementById("dialer-contact-number");
+    // сразу показываем скрытый блок
+    document.getElementById("dialer-call-status").style.display = "block";
+    // и скрываем хинт
+    document.getElementById("dialer-input-hint").style.display = "none";
 
-    document.getElementById("webrtc-wrapper").innerHTML += "<div id = 'webrtc-debugger-output' style='max-height: 200px; overflow: auto;'></div>";
+    // имя и номер контакта
+    var contactName = document.getElementById("dialer-call-contact");
+    var contactNumber = document.getElementById("dialer-call-number");
+    contactName.innerHTML = "contactName";
+    contactNumber.innerHTML = "contactNumber";
+
+    document.getElementById("webrtc-wrapper").innerHTML += "<div id = 'webrtc-debugger-output' style='max-height: 200px; max-width: 400px; overflow: auto;'></div>";
 
     function loop(){
         if (unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session){
@@ -42,6 +50,6 @@
     setTimeout(
         setInterval(
             loop, 1000
-        ), 3000
+        ), 5000
     );
 })();
