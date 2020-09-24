@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1.7
 // @description  try to take over the world!
-// @author       You
+// @author       DEMENTOR
 // @match        https://crm.hotlead.io/telephony/web-rtc/sip-accounts
 // @match        http://localhost:8080/telephony/web-rtc/sip-accounts
 // @downloadURL  https://github.com/m-bezrukavnikov-hotlead-io/webrtc-tester/raw/master/webrtc_tester.user.js
