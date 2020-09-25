@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         WebRTC Tester
 // @namespace    http://tampermonkey.net/
-// @version      0.1.7
+// @version      0.1.8
 // @description  try to take over the world!
-// @author       DEMENTOR
+// @author       You
 // @match        https://crm.hotlead.io/telephony/web-rtc/sip-accounts
-// @match        http://localhost:8080/telephony/web-rtc/sip-accounts
 // @downloadURL  https://github.com/m-bezrukavnikov-hotlead-io/webrtc-tester/raw/master/webrtc_tester.user.js
 // @updateURL    https://github.com/m-bezrukavnikov-hotlead-io/webrtc-tester/raw/master/webrtc_tester.user.js
 // @run-at       document-start
@@ -22,7 +21,7 @@
     // и скрываем хинт
     document.getElementById("dialer-input-hint").style.display = "none";
 
-    document.getElementById("webrtc-wrapper").innerHTML += "<div id = 'webrtc-debugger-output' style='max-height: 200px; max-width: 400px; overflow: auto;'></div>";
+    document.getElementById("webrtc-wrapper").innerHTML += "<div id = 'webrtc-tester-output' style='max-height: 200px; max-width: 400px; overflow: auto;'></div>";
 
     function loop(){
         if (unsafeWindow.webrtcWidget.webrtcBox.phoneEngine.session){
@@ -37,7 +36,7 @@
     }
 
     function output(message){
-        document.getElementById("webrtc-debugger-output").innerHTML = message + "<br>" + document.getElementById("webrtc-debugger-output").innerHTML;
+        document.getElementById("webrtc-tester-output").innerHTML = message + "<br>" + document.getElementById("webrtc-tester-output").innerHTML;
     }
 
     // даём время на установку сессии
